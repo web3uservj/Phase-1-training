@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!-- Bootstrap Carousel -->
+<div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="/images/Coolie.jpg" class="d-block w-100" alt="Slide 1" style="height: 90vh; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/Coolie1.png" class="d-block w-100" alt="Slide 2" style="height: 90vh; object-fit: cover;">
+        </div>
+        <div class="carousel-item">
+            <img src="~/images/images.png" class="d-block w-100" alt="Slide 3" style="height: 90vh; object-fit: cover;">
+        </div>
+    </div>
+</div>
+
+<!-- Overlay Welcome Section -->
+<div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-center text-white" style="top: 0; bottom: 0;">
+    <div class="bg-dark bg-opacity-50 p-5 rounded">
+        <h1 class="display-4 fw-bold text-white">Welcome to Coolie Ticket Booking</h1>
+        <p class="lead mt-3 mb-4 text-light">
+            Book your coolie assistance with ease and save time at the station.
+        </p>
+        <a class="btn btn-lg btn-success px-4" asp-controller="BookTicket" asp-action="BookTicket">
+            Book Ticket
+        </a>
+    </div>
+</div>

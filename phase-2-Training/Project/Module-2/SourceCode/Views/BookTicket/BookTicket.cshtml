@@ -1,0 +1,50 @@
+﻿@model Audience
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Audience Ticket Form</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Ticket" method="post" novalidate>
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Name</label>
+                            <input asp-for="Name" class="form-control" placeholder="Enter your name" />
+                            <span asp-validation-for="Name" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Gender" class="form-label">Gender</label>
+                            <select asp-for="Gender" class="form-select">
+                                <option value="">-- Select Gender --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger small"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Age" class="form-label">Age</label>
+                            <input asp-for="Age" type="number" class="form-control" placeholder="Enter your age" />
+                            <span asp-validation-for="Age" class="text-danger small"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="DateOfBirth" class="form-label">DateOfBirth</label>
+                            <input asp-for="DateOfBirth" type="date" class="form-control" placeholder="Enter your date of birth" />
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

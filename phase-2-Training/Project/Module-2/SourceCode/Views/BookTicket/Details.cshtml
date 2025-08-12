@@ -1,0 +1,38 @@
+﻿@model Audience
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Audience Details</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped mb-0">
+                        <tbody>
+                            <tr>
+                                <th style="width: 30%;">Name</th>
+                                <td>@Model.Name</td>
+                            </tr>
+                            <tr>
+                                <th>Gender</th>
+                                <td>@Model.Gender</td>
+                            </tr>
+                            <tr>
+                                <th>Age</th>
+                                <td>@Model.Age</td>
+                            </tr>
+                            <tr>
+                                <th>Date Of Birth</th>
+                                <td>@Model.DateOfBirth</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer text-end">
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
