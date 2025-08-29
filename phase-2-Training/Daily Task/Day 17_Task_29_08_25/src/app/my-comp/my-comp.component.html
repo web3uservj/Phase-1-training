@@ -1,0 +1,80 @@
+<p class="app-title">My Component Works!</p>
+
+<h3>{{ ooty.Name }} is at {{ ooty.elevation }} m</h3>
+
+<!-- Favorite Places Section -->
+<section class="form-section">
+  <h2>Add Favorite Place</h2>
+  <input type="text" [(ngModel)]="newPlace" placeholder="Enter your favorite place" />
+  <input type="number" [(ngModel)]="newelevation" placeholder="Enter elevation (in meters)" />
+</section>
+
+<section class="form-section">
+  <h2>Add a Book</h2>
+  <input type="text" [(ngModel)]="title" placeholder="Enter title" />
+  <input type="text" [(ngModel)]="author" placeholder="Enter author" />
+  <input type="text" [(ngModel)]="genre" placeholder="Enter genre" />
+  <input type="number" [(ngModel)]="price" placeholder="Enter price" />
+  <input type="date" [(ngModel)]="date" placeholder="Enter published date" />
+  <button (click)="addmore()">Add</button>
+</section>
+
+<section class="form-section">
+  <h2>Delete Book by ID</h2>
+  <input #idInput type="number" placeholder="Enter a book ID" />
+<button (click)="deletebyId(+idInput.value)">Delete</button>
+ <p *ngIf="deleteMessage" style="margin-top: 10px;">
+    {{ deleteMessage }}
+  </p>
+</section>
+
+
+<!-- Favorite Places List -->
+<section>
+  <h2>My Favorite Places</h2>
+  <ul>
+    <li *ngFor="let myplace of my_fav_places">
+      {{ myplace.Name }} is at {{ myplace.elevation }} m
+    </li>
+  </ul>
+</section>
+
+<!-- Book List -->
+<section>
+  <h2>Book List</h2>
+  <ul>
+    <li *ngFor="let book of books">
+      <strong>{{ book.title }}</strong> by {{ book.author }}
+    </li>
+  </ul>
+</section>
+
+<h3>New Books</h3>
+<ul>
+  <li *ngFor="let book of newBooks">
+    {{ book.title }} by {{ book.author.authorName }} - ₹{{ book.price }}
+  </li>
+</ul>
+
+<section class="form-section">
+  <h2>Update Book</h2>
+
+  <!-- Input for Book ID -->
+  <input type="number" [(ngModel)]="updateId" placeholder="Enter book ID to update" />
+
+  <!-- Inputs for Book Details -->
+  <input type="text" [(ngModel)]="updateTitle" placeholder="Enter new title" />
+  <input type="text" [(ngModel)]="updateAuthor" placeholder="Enter new author" />
+  <input type="text" [(ngModel)]="updateGenre" placeholder="Enter new genre" />
+  <input type="number" [(ngModel)]="updatePrice" placeholder="Enter new price" />
+  <input type="date" [(ngModel)]="updateDate" placeholder="Enter new publish date" />
+
+  <!-- Update Button -->
+  <button (click)="updateBook()">Update</button>
+
+  <!-- Confirmation or Error Message -->
+  <p *ngIf="updateMessage" style="margin-top: 10px;">
+    {{ updateMessage }}
+  </p>
+</section>
+
