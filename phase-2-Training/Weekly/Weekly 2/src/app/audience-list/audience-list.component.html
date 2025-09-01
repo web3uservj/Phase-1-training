@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Audience List</h2>
+
+  <mat-form-field appearance="fill" style="width: 200px;">
+    <mat-label>Filter by Gender</mat-label>
+    <mat-select [(value)]="selectedGender" (selectionChange)="filterByGender()">
+      <mat-option value="">All</mat-option>
+      <mat-option value="Male">Male</mat-option>
+      <mat-option value="Female">Female</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <p>Total Audience: {{ totalAudience }}</p>
+  <p>Average Age: {{ averageAge }}</p>
+
+  <table mat-table [dataSource]="audiences" class="mat-elevation-z8" style="width: 100%; margin-top: 10px;">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Age Column -->
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>Age</th>
+      <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+    </ng-container>
+
+    <!-- Gender Column -->
+    <ng-container matColumnDef="gender">
+      <th mat-header-cell *matHeaderCellDef>Gender</th>
+      <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button color="primary" (click)="viewDetails(element.name)">Details</button>
+        <button mat-button color="warn" (click)="deleteAudience(element.name)">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['name', 'age', 'gender', 'actions']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name', 'age', 'gender', 'actions'];"></tr>
+  </table>
+</div>

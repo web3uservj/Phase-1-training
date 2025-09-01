@@ -1,0 +1,74 @@
+<div class="container mt-5 p-4 bg-white rounded shadow-sm" style="max-width: 400px;">
+  <h2 class="mb-4">Book Ticket</h2>
+  
+  <form (ngSubmit)="bookTicket()" #ticketForm="ngForm" novalidate>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        required
+        [(ngModel)]="audience.name"
+        #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+      />
+      <div *ngIf="name.invalid && name.touched" class="invalid-feedback">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="age" class="form-label">Age</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        class="form-control"
+        required
+        min="1"
+        [(ngModel)]="audience.age"
+        #age="ngModel"
+        [class.is-invalid]="age.invalid && age.touched"
+      />
+      <div *ngIf="age.invalid && age.touched" class="invalid-feedback">
+        Please enter a valid age.
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="gender" class="form-label">Gender</label>
+      <select
+        id="gender"
+        name="gender"
+        class="form-select"
+        required
+        [(ngModel)]="audience.gender"
+        #gender="ngModel"
+        [class.is-invalid]="gender.invalid && gender.touched"
+      >
+        <option value="" disabled selected>Select gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <div *ngIf="gender.invalid && gender.touched" class="invalid-feedback">
+        Please select a gender.
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary w-100"
+      [disabled]="ticketForm.invalid"
+    >
+      Book Ticket
+    </button>
+
+  </form>
+
+  <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+    {{ errorMessage }}
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container" *ngIf="audience; else noAudience">
+  <h2>Audience Details</h2>
+
+  <mat-card>
+    <mat-card-title>{{ audience.name }}</mat-card-title>
+    <mat-card-content>
+      <p><strong>Age:</strong> {{ audience.age }}</p>
+      <p><strong>Gender:</strong> {{ audience.gender }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="router.navigate(['/'])">Back to List</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #noAudience>
+  <p>Audience not found.</p>
+  <button mat-button color="primary" (click)="router.navigate(['/'])">Back to List</button>
+</ng-template>
