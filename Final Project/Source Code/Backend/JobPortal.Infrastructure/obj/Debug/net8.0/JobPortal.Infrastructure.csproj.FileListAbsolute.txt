@@ -1,0 +1,17 @@
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\bin\Debug\net8.0\JobPortal.Infrastructure.deps.json
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\bin\Debug\net8.0\JobPortal.Infrastructure.runtimeconfig.json
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\bin\Debug\net8.0\JobPortal.Infrastructure.dll
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\bin\Debug\net8.0\JobPortal.Infrastructure.pdb
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\bin\Debug\net8.0\JobPortal.Core.dll
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\bin\Debug\net8.0\JobPortal.Core.pdb
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.AssemblyInfo.cs
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPorta.9BCA61E9.Up2Date
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.dll
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\refint\JobPortal.Infrastructure.dll
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.pdb
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\JobPortal.Infrastructure.genruntimeconfig.cache
+C:\Users\vijay.m\Downloads\job-portal-api\JobPortal.Infrastructure\obj\Debug\net8.0\ref\JobPortal.Infrastructure.dll
